@@ -42,13 +42,10 @@ KEY = os.getenv("GNEWS_TOKEN", "")
 **Create environment & install deps
 
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux:
 source .venv/bin/activate
 pip install -U pip
 pip install -r requirements.txt   # if missing, install packages based on script imports
 
-(Optional) 
 python "stock price.py"
 python "news collect.py"
 python "data partitioning.py"
