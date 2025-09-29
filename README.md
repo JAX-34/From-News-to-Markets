@@ -22,7 +22,9 @@ from dotenv import load_dotenv
 load_dotenv()
 KEY = os.getenv("GNEWS_TOKEN", "")
 
-Project Layout
+**Project Layout**
+
+```text
 .                                # From-News-to-Markets (repo root)
 ├─ 3model.py                     # Training & evaluation: Ridge / XGB / lightweight Transformer
 ├─ data partitioning.py          # Time split & alignment: produce train/val/test
@@ -36,7 +38,8 @@ Project Layout
    ├─ stock_train.csv            # Train/val prices
    └─ test_stock_data.csv        # Intermediate/sample artifact
 
-Create environment & install deps
+
+**Create environment & install deps
 
 python -m venv .venv
 # Windows: .venv\Scripts\activate
