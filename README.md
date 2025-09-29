@@ -39,17 +39,16 @@ KEY = os.getenv("GNEWS_TOKEN", "")
    └─ test_stock_data.csv        # Intermediate/sample artifact
 
 
+
 **Create environment & install deps
 
-python -m venv .venv
-source .venv/bin/activate
-pip install -U pip
-pip install -r requirements.txt   # if missing, install packages based on script imports
+1.Run 3model.py directly — this is the main training and prediction script.
 
-python "stock price.py"
-python "news collect.py"
-python "data partitioning.py"
-python "3model.py"
+2. The other scripts are used for data collection and preprocessing.
+
+3.Since the GNews API key is privately purchased and cannot be shared, news collect.py is only for demonstration purposes and cannot fetch data directly. This does not affect the execution of 3model.py, as the repository already includes processed data.
+
+4.Configure your local environment before running the code. The project was developed with Python 3.11. Please install the required dependencies based on the import statements in the scripts (e.g., pandas, numpy, scikit-learn, xgboost, torch, etc.).
 
 
 
